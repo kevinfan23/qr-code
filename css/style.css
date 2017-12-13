@@ -1,0 +1,55 @@
+body {
+  background: white; }
+
+input[type=file] {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 15vw;
+  top: 40%;
+  left: 50%;
+  margin-right: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  width: 100px;
+  overflow: hidden;
+  background-color: yellow; }
+
+/*
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    
+*/
+input[type=file]:focus {
+  border-color: red; }
+
+.upload-img {
+  width: 30vw;
+  height: 30vw;
+  border: 1px solid white;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50px;
+  left: 50%;
+  margin-right: 50%;
+  transform: translateX(-50%); }
+
+/*** PACE Loading Bar Styles ***/
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+
+.pace-inactive {
+  display: none; }
+
+.pace .pace-progress {
+  background: #3F99FF;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 3px; }
