@@ -1,30 +1,13 @@
-/*
-function start() {
-  // 2. Initialize the JavaScript client library.
-  gapi.client.init({
-    'apiKey': 'YOUR_API_KEY',
-    // Your API key will be automatically added to the Discovery Document URLs.
-    'discoveryDocs': ['https://people.googleapis.com/$discovery/rest'],
-    // clientId and scope are optional if auth is not required.
-    'clientId': 'YOUR_WEB_CLIENT_ID.apps.googleusercontent.com',
-    'scope': 'profile',
-  }).then(function() {
-    // 3. Initialize and make the API request.
-    return gapi.client.people.people.get({
-      'resourceName': 'people/me',
-      'requestMask.includeField': 'person.names'
-    });
-  }).then(function(response) {
-    console.log(response.result);
-  }, function(reason) {
-    console.log('Error: ' + reason.result.error.message);
-  });
-};
-*/
+var longUrl;
 
-(function(){
+$(document).ready(function() {
+	longUrl = "https://gist.github.com/jeromeetienne/f0bd6fe553488298454a7495650b7b22";
 
-})();
+	urlShortner(longUrl, function(short_url) {
+   		console.log(short_url);
+	});
+});
+
 
 function previewFile(){
 //    var preview = document.querySelector('img'); //selects the query named img
@@ -44,10 +27,17 @@ function previewFile(){
        //var imgData = convertImageToCanvas(file);
        //var ctx = canvas.getContext('2d');
        document.getElementsByClassName('input-container')[0].appendChild(preview);
+       googleApiClientReady();
    } else {
        preview.src = "";
        //alert("Image upload failed");
    }
+}
+
+function encodeUrl() {
+	var url = document.getElementById('url-input').value;
+// 	console.log(url);
+
 }
 
 function convertImageToCanvas(image) {
@@ -58,3 +48,25 @@ function convertImageToCanvas(image) {
 
 	return canvas;
 }
+
+// POST to google API
+function urlShortner(long_url, func) {
+	var login = "o_1f5bndsc3j";
+	var api_key = "R_d7a01329aaf843708e85205dce13c7a5";
+	
+    $.getJSON(
+        "http://api.bitly.com/v3/shorten?callback=?", 
+        { 
+            "format": "json",
+            "apiKey": api_key,
+            "login": login,
+            "longUrl": longUrl
+        },
+        
+        function(response)
+        {
+            func(response.data.url);
+        }
+    );
+}
+

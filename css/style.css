@@ -1,38 +1,53 @@
 body {
   background: white; }
 
-input[type=file] {
+.input-container {
+  height: 100px;
+  width: 50%;
+  background: yellow;
   position: relative;
   margin: 0 auto;
-  margin-top: 15vw;
-  top: 40%;
+  margin-top: 40vh;
   left: 50%;
   margin-right: 50%;
   transform: translateX(-50%);
-  padding: 5px;
-  width: 100px;
+  text-align: center; }
+
+.submit-button {
+  display: inline-block; }
+
+input#file-input {
+  position: relative;
+  /*
+	margin: 0 auto;
+	margin-top: 13vw;
+	top: 40%;
+	left: 50%;
+	margin-right: 50%;
+	transform: translateX(-50%);
+*/
+  width: 105px;
   overflow: hidden;
   background-color: yellow; }
 
-/*
-    border:2px solid #ccc; 
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    
-*/
-input[type=file]:focus {
-  border-color: red; }
+input#url-input {
+  width: 50%; }
+
+.submit-button {
+  margin-left: 20px; }
 
 .upload-img {
   width: 30vw;
   height: 30vw;
   border: 1px solid white;
   position: relative;
-  margin: 0 auto;
-  margin-top: 50px;
-  left: 50%;
-  margin-right: 50%;
-  transform: translateX(-50%); }
+  /*
+	margin: 0 auto;
+	margin-top: 50px;
+	left: 50%;
+	margin-right: 50%;
+	transform: translateX(-50%);
+*/ }
 
 /*** PACE Loading Bar Styles ***/
 .pace {

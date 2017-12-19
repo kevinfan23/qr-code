@@ -17,10 +17,14 @@
 </head>
 <body>
 	<div class="input-container">
-		<input type="file" onchange="previewFile()"><br>
+		<input id="file-input" type="file" onchange="previewFile()"><br>
+		<p>or</p>
+		<input type="text" id="url-input" value="" placeholder="Enter url">
+		<button class="submit-button" onclick="encodeUrl()">Enter</button>
 <!-- 		<img class="upload-img" src="" border="0"> -->
 	</div>
-
-  <script src="js/main.js"></script>
+	
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
