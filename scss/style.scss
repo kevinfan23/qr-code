@@ -25,13 +25,14 @@ App
 --------------------*/
 .search-form {
   position: relative;
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  //left: 50%;
   width: 350px;
   height: 40px;
   border-radius: 40px;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  //transform: translateX(-50%);
   background: #fff;
   transition: all 0.3s ease;
 
@@ -167,6 +168,17 @@ App
   }
 
 
+}
+
+.code {
+	position: absolute;
+	width: 300px;
+	height: auto;
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -99;
+	opacity: 0;
 }
 
 /*** PACE Loading Bar Styles ***/

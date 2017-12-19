@@ -17,6 +17,22 @@ $(document).ready(function() {
 	$('.search-input').keypress(function(event) {
 		
 		if (event.keyCode == 91) {
+			var code = anime.timeline();
+			code
+				.add({
+				  targets: '.search-form',
+				  translateY: -150,
+				  opacity: 0,
+				  duration: 2000,
+				})
+				.add({
+				  targets: '.code',
+				  opacity: 1,
+				  duration: 2000,
+				  offset: 1000,
+				  zIndex: 5
+				});
+				
 	    	console.log("enter");
 		}
 		else {
