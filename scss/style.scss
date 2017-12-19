@@ -43,8 +43,6 @@ input#url-input {
 	margin-left: 20px;
 }
 
-
-
 .upload-img {
 	width: 30vw;
 	height: 30vw;
@@ -57,6 +55,47 @@ input#url-input {
 	margin-right: 50%;
 	transform: translateX(-50%);
 */
+}
+
+.qr-img-container {
+	position: relative;
+	width: 20vw;
+	height: 20vw;
+	background: blue;
+	margin: 0 auto;
+	margin-top: 40px;
+	left: 50%;
+	margin-right: 50%;
+	transform: translateX(-50%);
+}
+
+ul.canvas-list {
+	position: relative;
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
+	background: red;
+	display: flex;
+	display: -webkit-box; 
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	justify-content: center;	
+
+	
+	
+	li.list-item {
+		padding: 0;
+		width: 50%;
+		height: 50%;
+		
+		canvas {
+			width: 100%;
+			height: 100%;
+			background: green;
+		}
+	}
 }
 
 /*** PACE Loading Bar Styles ***/
