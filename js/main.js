@@ -66,7 +66,7 @@ function previewFile(){
        //alert("Image upload failed");
    }
 */	
-   window.location.href = "http://bit.ly/2kKpQbK";
+   window.location.href = "http://bit.ly/2oMIMvB";
 }
 
 function encodeUrl() {
