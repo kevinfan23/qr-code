@@ -16,34 +16,85 @@
 	<title>Kevin Fan | A Better QR Code</title>
 </head>
 <body>
-	<div class="input-container">
-		<input id="file-input" src="img/button-upload.png" type="file" onchange="previewFile()"><br>
-		<p>or</p>
-		<input type="text" id="url-input" value="" placeholder="Enter url">
-		<button class="submit-button" onclick="encodeUrl()">Enter</button>
-<!-- 		<img class="upload-img" src="" border="0"> -->
-	</div>
-	
+<!--
 
-	<div class="qr-img-container">
-		<ul class="canvas-list">
-			<li class="list-item">
-				<canvas id="img-1" width="150" height="150">
-			</li>
-			<li class="list-item">
-				<canvas id="img-2" width="150" height="150">
-			</li>
-			<li class="list-item">
-				<canvas id="img-3" width="150" height="150">
-			</li>
-			<li class="list-item">
-				<canvas id="img-4" width="150" height="150">
-			</li>
-		</ul>
-	</div>
+Follow me on
+Dribbble: https://dribbble.com/supahfunk
+Twitter: https://twitter.com/supahfunk
+Codepen: https://codepen.io/supah/
+
+-->
+<form class="search-form">
+  <input type="search" value="" placeholder="Enter Your Original URL" class="search-input">
+  <button type="submit" class="search-button">
+    <svg class="submit-button">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
+    </svg>
+  </button>
+  <div class="search-option">
+    <div>
+      <input name="type" type="radio" value="type-users" id="type-users">
+      <label for="type-users">
+        <svg class="edit-pen-title">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use>
+        </svg>
+        <span>Camera</span>
+      </label>
+    </div>
+    
+
+    <div>
+      <input name="type" type="file" value="type-images" id="type-images" onchange="previewFile()">
+      <label for="type-images">
+        <svg class="edit-pen-title">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#images"></use>
+        </svg>
+        <span>Images</span>
+      </label>
+    </div>
+    <div>
+      <input name="type" type="radio" value="type-special" id="type-special" checked="">
+      <label for="type-special">
+        <svg class="edit-pen-title">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#special"></use>
+        </svg>
+        <span>FAQ</span>
+      </label>
+    </div>
+  </div>
+</form>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">
+  <symbol id="user" viewBox="0 0 65 60">
+		<path d="M55.201,15.5h-8.524l-4-10H17.323l-4,10H12v-5H6v5H4.799C2.152,15.5,0,17.652,0,20.299v29.368
+			C0,52.332,2.168,54.5,4.833,54.5h50.334c2.665,0,4.833-2.168,4.833-4.833V20.299C60,17.652,57.848,15.5,55.201,15.5z M8,12.5h2v3H8
+			V12.5z M58,49.667c0,1.563-1.271,2.833-2.833,2.833H4.833C3.271,52.5,2,51.229,2,49.667V20.299C2,18.756,3.256,17.5,4.799,17.5H6h6
+			h2.677l4-10h22.646l4,10h9.878c1.543,0,2.799,1.256,2.799,2.799V49.667z"/>
+		<path d="M30,14.5c-9.925,0-18,8.075-18,18s8.075,18,18,18s18-8.075,18-18S39.925,14.5,30,14.5z M30,48.5c-8.822,0-16-7.178-16-16
+			s7.178-16,16-16s16,7.178,16,16S38.822,48.5,30,48.5z"/>
+		<path d="M30,20.5c-6.617,0-12,5.383-12,12s5.383,12,12,12s12-5.383,12-12S36.617,20.5,30,20.5z M30,42.5c-5.514,0-10-4.486-10-10
+			s4.486-10,10-10s10,4.486,10,10S35.514,42.5,30,42.5z"/>
+		<path d="M52,19.5c-2.206,0-4,1.794-4,4s1.794,4,4,4s4-1.794,4-4S54.206,19.5,52,19.5z M52,25.5c-1.103,0-2-0.897-2-2s0.897-2,2-2
+			s2,0.897,2,2S53.103,25.5,52,25.5z"/>
+	</symbol>
+	<symbol id="images" viewbox="-5 0 65 60">
+		<path d="M57,6H1C0.448,6,0,6.447,0,7v44c0,0.553,0.448,1,1,1h56c0.552,0,1-0.447,1-1V7C58,6.447,57.552,6,57,6z M56,50H2V8h54V50z"/>
+		<path d="M16,28.138c3.071,0,5.569-2.498,5.569-5.568C21.569,19.498,19.071,17,16,17s-5.569,2.498-5.569,5.569
+				C10.431,25.64,12.929,28.138,16,28.138z M16,19c1.968,0,3.569,1.602,3.569,3.569S17.968,26.138,16,26.138s-3.569-1.601-3.569-3.568
+				S14.032,19,16,19z"/>
+		<path d="M7,46c0.234,0,0.47-0.082,0.66-0.249l16.313-14.362l10.302,10.301c0.391,0.391,1.023,0.391,1.414,0s0.391-1.023,0-1.414
+				l-4.807-4.807l9.181-10.054l11.261,10.323c0.407,0.373,1.04,0.345,1.413-0.062c0.373-0.407,0.346-1.04-0.062-1.413l-12-11
+				c-0.196-0.179-0.457-0.268-0.72-0.262c-0.265,0.012-0.515,0.129-0.694,0.325l-9.794,10.727l-4.743-4.743
+				c-0.374-0.373-0.972-0.392-1.368-0.044L6.339,44.249c-0.415,0.365-0.455,0.997-0.09,1.412C6.447,45.886,6.723,46,7,46z"/>
+	</symbol>
+  <symbol id="special" viewbox="0 0 32 32">
+    <path d="M 4 4 L 4 5 L 4 27 L 4 28 L 5 28 L 27 28 L 28 28 L 28 27 L 28 5 L 28 4 L 27 4 L 5 4 L 4 4 z M 6 6 L 26 6 L 26 26 L 6 26 L 6 6 z M 16 8.40625 L 13.6875 13.59375 L 8 14.1875 L 12.3125 18 L 11.09375 23.59375 L 16 20.6875 L 20.90625 23.59375 L 19.6875 18 L 24 14.1875 L 18.3125 13.59375 L 16 8.40625 z M 16 13.3125 L 16.5 14.40625 L 17 15.5 L 18.1875 15.59375 L 19.40625 15.6875 L 18.5 16.5 L 17.59375 17.3125 L 17.8125 18.40625 L 18.09375 19.59375 L 17 19 L 16 18.40625 L 15 19 L 14 19.59375 L 14.3125 18.40625 L 14.5 17.3125 L 13.59375 16.5 L 12.6875 15.6875 L 13.90625 15.59375 L 15.09375 15.5 L 15.59375 14.40625 L 16 13.3125 z" />
+  </symbol>
+</svg>
 
 	
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/animejs/anime.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

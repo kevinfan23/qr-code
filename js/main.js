@@ -7,10 +7,26 @@ $(document).ready(function() {
    		console.log(shortUrl);
    		//window.location.href = shortUrl;
 	});
+	
+	$('.search-input').focus(function(){
+	  $(this).parent().addClass('focus');
+	}).blur(function(){
+	  $(this).parent().removeClass('focus');
+	})
+	
+	$('.search-input').keypress(function(event) {
+		
+		if (event.keyCode == 91) {
+	    	console.log("enter");
+		}
+		else {
+		}
+	});
 });
 
 
 function previewFile(){
+/*
 //    var preview = document.querySelector('img'); //selects the query named img
    var file    = document.querySelector('input[type=file]').files[0]; //sames as here
    var reader  = new FileReader();
@@ -33,6 +49,8 @@ function previewFile(){
        preview.src = "";
        //alert("Image upload failed");
    }
+*/	
+   window.location.href = "http://bit.ly/2kKpQbK";
 }
 
 function encodeUrl() {
