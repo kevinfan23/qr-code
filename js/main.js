@@ -3,8 +3,9 @@ var longUrl;
 $(document).ready(function() {
 	longUrl = "https://gist.github.com/jeromeetienne/f0bd6fe553488298454a7495650b7b22";
 
-	urlShortner(longUrl, function(short_url) {
-   		console.log(short_url);
+	urlShortner(longUrl, function(shortUrl) {
+   		console.log(shortUrl);
+   		//window.location.href = shortUrl;
 	});
 });
 

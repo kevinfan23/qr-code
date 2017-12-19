@@ -1,5 +1,5 @@
 body {
-  background: white; }
+  background: #eeeeee; }
 
 .input-container {
   height: 100px;
@@ -56,9 +56,11 @@ input#url-input {
   background: blue;
   margin: 0 auto;
   margin-top: 40px;
-  left: 50%;
-  margin-right: 50%;
-  transform: translateX(-50%); }
+  /*
+	left: 50%;
+	margin-right: 50%;
+	transform: translateX(-50%);
+*/ }
 
 ul.canvas-list {
   position: relative;
@@ -68,10 +70,10 @@ ul.canvas-list {
   margin: 0 auto;
   padding: 0;
   background: red;
-  display: flex;
   display: -webkit-box;
-  flex-wrap: wrap;
+  display: flex;
   -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: center; }
   ul.canvas-list li.list-item {
     padding: 0;
@@ -80,7 +82,8 @@ ul.canvas-list {
     ul.canvas-list li.list-item canvas {
       width: 100%;
       height: 100%;
-      background: green; }
+      background: gray;
+      border: solid 1px black; }
 
 /*** PACE Loading Bar Styles ***/
 .pace {

@@ -13,11 +13,11 @@
 
 	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
-	<title>Kevin Fan | Fiore</title>
+	<title>Kevin Fan | A Better QR Code</title>
 </head>
 <body>
 	<div class="input-container">
-		<input id="file-input" type="file" onchange="previewFile()"><br>
+		<input id="file-input" src="img/button-upload.png" type="file" onchange="previewFile()"><br>
 		<p>or</p>
 		<input type="text" id="url-input" value="" placeholder="Enter url">
 		<button class="submit-button" onclick="encodeUrl()">Enter</button>
@@ -28,16 +28,16 @@
 	<div class="qr-img-container">
 		<ul class="canvas-list">
 			<li class="list-item">
-				<canvas id="img-1" width="150" height="150" style="border:1px solid #d3d3d3;">
+				<canvas id="img-1" width="150" height="150">
 			</li>
 			<li class="list-item">
-				<canvas id="img-2" width="150" height="150" style="border:1px solid #d3d3d3;">
+				<canvas id="img-2" width="150" height="150">
 			</li>
 			<li class="list-item">
-				<canvas id="img-3" width="150" height="150" style="border:1px solid #d3d3d3;">
+				<canvas id="img-3" width="150" height="150">
 			</li>
 			<li class="list-item">
-				<canvas id="img-4" width="150" height="150" style="border:1px solid #d3d3d3;">
+				<canvas id="img-4" width="150" height="150">
 			</li>
 		</ul>
 	</div>
